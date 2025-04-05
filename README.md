@@ -1,3 +1,5 @@
+start app gramo-iota.vercel.app
+
 backend is deployed on railway.com (gramo-production.up.railway.app)
 
-for frontend execute flutter run on inside gramo/gramo
+frontend (flutter) is deployed on vercel (gramo-iota.vercel.app)
