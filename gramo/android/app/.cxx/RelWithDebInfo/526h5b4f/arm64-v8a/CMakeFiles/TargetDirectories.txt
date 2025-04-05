@@ -1,0 +1,2 @@
+C:/Users/mahmo/Downloads/gramo/gramo/android/app/.cxx/RelWithDebInfo/526h5b4f/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/mahmo/Downloads/gramo/gramo/android/app/.cxx/RelWithDebInfo/526h5b4f/arm64-v8a/CMakeFiles/rebuild_cache.dir
