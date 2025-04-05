@@ -1,6 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'auth_service.dart';
 
 class GrammarProvider extends ChangeNotifier {
   bool isLoading = false;
@@ -11,10 +12,12 @@ class GrammarProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
+      final token = await AuthService.getToken();
       final response = await http.post(
-        Uri.parse('http://localhost:5000/api/grammar/check'), // replace with your backend URL
+        Uri.parse('https://gramo-production.up.railway.app/api/grammar/check'),
         headers: {
           'Content-Type': 'application/json',
+          if (token != null) 'Authorization': 'Bearer $token',
         },
         body: jsonEncode({'text': text}),
       );
