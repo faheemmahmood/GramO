@@ -1,5 +1,32 @@
-start app gramo-iota.vercel.app
+🧠 Gramo – Grammar Checker App
+Gramo is a AI-powered (gemini 1.5) grammar checking web application built with Flutter (Frontend) and Node.js + Express (Backend). It allows users to enter text and get grammar suggestions, highlighting mistakes and offering corrections using OpenAI's API.
 
-backend is deployed on railway.com (gramo-production.up.railway.app)
+🚀 Features
+✍️ Grammar checking powered by AI
 
-frontend (flutter) is deployed on vercel (gramo-iota.vercel.app)
+✅ Highlights corrections and mistakes with color-coded feedback
+
+🌐 Fully deployed frontend on Vercel
+
+☁️ Backend hosted on Railway
+
+🛠️ Tech Stack
+Frontend: Flutter (Web)
+
+Backend: Node.js, Express
+
+Authentication: Token-based
+
+AI Integration: OpenAI GPT
+
+Hosting:
+
+Frontend: Vercel
+
+Backend: Railway
+
+🌍 Live Deployment
+Frontend: https://gramo.vercel.app
+
+Backend: https://gramo-production.up.railway.app
+
