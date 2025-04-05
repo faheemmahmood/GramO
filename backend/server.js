@@ -1,16 +1,19 @@
 const express = require("express");
 const app = express();
-const authRoutes = require("./routes/auth_route"); // Correct path
+const authRoutes = require("./routes/authRoutes"); // Ensure path is correct
+const grammarRoutes = require("./routes/grammarRoutes"); // Add this line
 const cors = require("cors");
+require('dotenv').config(); // Load environment variables
 
-// MIDDLEWARE
-app.use(cors()); // 🔑 Allow requests from Flutter
-app.use(express.json()); // 🔑 Parse JSON
 
-// ROUTES
-app.use("/api/auth", authRoutes); // All routes will be under /api/auth
+app.use(cors()); // Allow requests from Flutter
+app.use(express.json()); // Parse JSON bodies
 
-// TEST ROOT
+// Routes
+app.use("/api/auth", authRoutes); // Authentication routes
+app.use("/api/grammar", grammarRoutes); // Grammar check routes (fixed this)
+
+// Test route
 app.get("/", (req, res) => {
   res.json({ message: "Backend is working." });
 });
@@ -20,7 +23,7 @@ app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-// SERVER
+// Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);

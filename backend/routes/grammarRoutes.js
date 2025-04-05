@@ -1,7 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const { checkGrammar } = require('../controllers/grammarController');
+const express = require("express");
+const { checkGrammar } = require("../controllers/grammarController");
 
-router.post('/check', checkGrammar);
+const router = express.Router();
+
+router.post("/check", checkGrammar); // Ensure this is correct
 
 module.exports = router;

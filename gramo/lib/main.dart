@@ -10,7 +10,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  Future<bool> checkAuth() => AuthService.isLoggedIn();
+  Future<bool> checkAuth() async {
+    return await AuthService.isLoggedIn();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -14,7 +14,7 @@ class GrammarProvider extends ChangeNotifier {
     try {
       final token = await AuthService.getToken();
       final response = await http.post(
-        Uri.parse('https://gramo-production.up.railway.app/api/grammar/check'),
+        Uri.parse('http://localhost:5000/api/grammar/check'), // Correct URL for your backend
         headers: {
           'Content-Type': 'application/json',
           if (token != null) 'Authorization': 'Bearer $token',

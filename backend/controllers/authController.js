@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const users = []; // Temporary storage (use DB later)
+let users = []; // Temporary storage (use a database later)
 
 // User login
 const login = async (req, res) => {
@@ -21,10 +21,8 @@ const login = async (req, res) => {
     res.json({ token });
 };
 
-// User signup (temporary, replace with DB later)
+// User signup
 const signup = async (req, res) => {
-    console.log("Received request body:", req.body); // Debugging
-
     const { username, password } = req.body;
     if (!username || !password) {
         return res.status(400).json({ message: "Username and password required" });
