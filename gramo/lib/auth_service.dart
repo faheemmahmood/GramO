@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  static const String baseUrl = 'http://localhost:5000/api/auth'; // Change to your actual server IP if on a real device
+  static const String baseUrl = 'https://gramo-production.up.railway.app/api/auth'; // Change to your actual server IP if on a real device
 
   static Future<String?> signup(String username, String password) async {
     try {
